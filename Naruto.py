@@ -305,7 +305,6 @@ def battle():
         elif p.score == 8:
             o = lee()
             print "Your Opponent will be the Taijutsu master Lee of the leaf!"
-            
         elif p.score == 12:
             o = neji()
             print "Your Opponent will be the Byakugan user Neji Hyuuga!"
@@ -753,7 +752,7 @@ def intro():
 
 
 
-#--- list of the jutsus -(skills/powers), we decided to render them as functions
+#--- list of the jutsus -(skills/powers), we decided to render them as functions----Aaron Stall----
 #--- since the skills had wildly varying effects
 #--- basic/advanced shield, basic/advanced strike, rasengan, chidori,
 #--- basic advanced healing, sharingan(passive, active), byakugan, sand shield,
@@ -770,7 +769,7 @@ class Jutsu(object):
         chakra_use = raw_input("How much chakra will you use?: ")
         chakra_use == int(chakra_use)
         p.chakra - int(chakra_use)
-        if Range <= 0
+        if Range == 0
             o.health - int(chakra_use)
         else print "Your strike fell short and your opponent avoided it easily."
     
@@ -812,22 +811,46 @@ class Jutsu(object):
     
     def byakugan():
         
-    
     def shinra_tensei():
-        
+        p.chakra - 50
+        print "You unleash a blast of energy from your hand that flings your opponent backward."
+        if Range == 0
+            o.health - 40
+        if Range == 1
+            o.health - 30
+        if Range == 2
+            o.health - 20
+        if Range == 3
+            o.health - 10
+        Range = 3
+        #Based on the range, different damage will be dealt to the opponent.
         
     def chidori():
-        
+        p.chakra - 75
+        print "Electricity crackles as you focus your chakra to your hand."
+        print "You lunge forwad viciously to lance your opponent."
+        if Range == 0
+            o.health - 80
+        if Range == 1 
+            o.health - 40
+        else print "Your strike falls short and fizzles out."
         
     def rasengan():
+        p.chakra - 60
+        print "Chakra swirls in your palm, spinning faster and faster every second."
+        print "You run forward thrusting the sphere of energy at your opponent."
+        if Range == 0
+            o.health - 60
+            Range = 2
+        else print "The chakra disapates before you can reach your opponent."
         
-    
-
-
-
-
-
-
+    def pheonix_flower():
+        p.chakra - 50
+        print "Chakra gathers in your lungs as you prepare to launch your attack."
+        print "Flames fly forward as you exhale, threatening to consume youer opponent."
+        if 1 <= Range <= 2
+            o.health - 50
+        else o.health - 30
 
 
 def main():
